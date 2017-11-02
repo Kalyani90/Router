@@ -1,0 +1,25 @@
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-block">
+    <h4 class="card-title"> welcome {{usNm}}, to the social media {{sm}}</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <!--same dashbord page login -->
+    <input type="text" value="update user" #uN>
+    <input type="button" value="Update" (click)="upUs(uN.value)" class="btn btn-primary">
+<!-- query param-->
+    <a [routerLink]="['/dash','android']" [queryParams]="{'smApp' : 'linkedin'}" class="btn btn-primary">Go on this page</a>
+  </div>
+</div>
+
