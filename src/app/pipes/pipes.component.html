@@ -1,0 +1,57 @@
+<div class="row card">
+  <div class="col-md-12">
+    <h1>Pipes</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <p> Date is {{dt | date:"hh : mm"}}</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <p> Cost is {{cst | currency}}</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <p> Technology is {{tech | uppercase | slice:"2":"4"}}</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <p> Repeatation {{ tech | custom:5 }}</p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="row card-title">
+    <div class="col-md-12">
+      <input type="text" [(ngModel)]="mb" placeholder="Search">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <input type="text" placeholder="Add New" #ad>
+      <input type="button" value="Add" (click)="kindlyAddNew(ad.value)">
+    </div>
+  </div>
+
+  <div class="row card-body">
+    <div class="col-md-12">
+      <ul>
+        <li *ngFor="let mob of (mobs | filter:mb);index as i">{{mob}}<button class="btn btn-danger" (click)="delete(i)">delete</button></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <p> Email is {{emVr | async}}</p>
+  </div>
+</div>

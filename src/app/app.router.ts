@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { Routes, RouterModule } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
 import { ListnewComponent } from './dash-board/listnew.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 const dashRoutes: Routes = [
   { path: 'profile', component: ProfileComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
     { path: 'dash/:usNm', component: DashBoardComponent, children: dashRoutes },
     { path: 'reg/:tm', component: RegistrationComponent },
     { path: 'regRec', component: ReactiveRegComponent},
+    { path: 'pipe', component: PipesComponent},
 ];
 
 

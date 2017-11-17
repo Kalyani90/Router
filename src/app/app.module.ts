@@ -11,6 +11,9 @@ import { ListFlatComponent } from './dash-board/list--flat/list--flat.component'
 import { ProfileComponent } from './dash-board/profile.component';
 import { ListnewComponent } from './dash-board/listnew.component';
 import { ReactiveRegComponent } from './reactive-reg/reactive-reg.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { CustomPipe } from './pipes/custom.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { ReactiveRegComponent } from './reactive-reg/reactive-reg.component';
     ListFlatComponent,
     ProfileComponent,
     ListnewComponent,
-    ReactiveRegComponent
+    ReactiveRegComponent,
+    PipesComponent,
+    CustomPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
